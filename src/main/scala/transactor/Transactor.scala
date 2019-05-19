@@ -48,10 +48,15 @@ class Transactor(val id: String) extends Actor {
 
         if(elapsed >= TIMEOUT){
 
+          println(s"${Console.RED}tx ${t.id} timed out...${Console.RESET}")
+
           t.p.success(false)
           queue.remove(t)
 
+
         } else if(!t.keys.exists(keys.contains(_))){
+
+          println(s"${Console.BLUE}processing tx ${t.id}...${Console.RESET}")
 
           t.p.success(true)
 
