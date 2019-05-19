@@ -20,5 +20,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-cluster-metrics" % akkaVersion,
   "com.typesafe.akka" %% "akka-cluster-tools" % akkaVersion,
   "com.typesafe.akka" %% "akka-actor" % akkaVersion,
-  "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test
+  "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test,
+  "com.twitter" %% "chill" % "0.9.3",
+  "com.twitter" %% "chill-akka" % "0.9.3"
 )

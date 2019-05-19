@@ -4,7 +4,7 @@
 		module="transactor_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20190517174829"
+		publication="20190518181637"
 	>
 		<description>
 		transactor
@@ -41,5 +41,7 @@
 		<dependency org="com.typesafe.akka" name="akka-cluster-tools_2.12" rev="2.5.22" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="2.5.22" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-testkit_2.12" rev="2.5.22" conf="test->default(compile)"/>
+		<dependency org="com.twitter" name="chill_2.12" rev="0.9.3" conf="compile->default(compile)"/>
+		<dependency org="com.twitter" name="chill-akka_2.12" rev="0.9.3" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
