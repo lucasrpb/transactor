@@ -49,6 +49,7 @@ class Coordinator(val id: String) extends Actor {
 
       val now = System.currentTimeMillis()
 
+
       running = running.filter { case (id, t) =>
         now - t.tmp < SERVER_TIMEOUT
       }
