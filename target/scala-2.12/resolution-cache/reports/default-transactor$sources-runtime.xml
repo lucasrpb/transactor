@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190519221020"/>
+		date="20190520174036"/>
 	<dependencies>
 		<module organisation="com.twitter" name="chill-akka_2.12">
 			<revision name="0.9.3" status="release" pubdate="20180811185515" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="29">
