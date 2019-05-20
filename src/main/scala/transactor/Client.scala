@@ -144,7 +144,10 @@ object Client {
 
     assert(ma == mb)
 
-    println(s"\nn: ${n} successes: ${hits} rate: ${(hits/n.toDouble) * 100} % req/s: ${(n * 1000)/elapsed}\n")
+    val rps = (n * 1000)/elapsed
+
+    println(s"\nn: ${n} successes: ${hits} rate: ${(hits/n.toDouble) * 100} % req/s: ${rps} " +
+      s"rate/s: ${(hits.toDouble/rps)*100} %\n")
 
     Await.ready(system.terminate(), 10 seconds)
 

@@ -39,16 +39,13 @@ class Coordinator(val id: String) extends Actor {
   override def preStart(): Unit = {
     cluster.subscribe(self, initialStateMode = InitialStateAsEvents, classOf[MemberEvent], classOf[UnreachableMember])
 
-    context.system.scheduler.schedule(5 milliseconds, 5 milliseconds){
+    context.system.scheduler.schedule(10 milliseconds, 10 milliseconds){
 
       var work = Seq.empty[Transaction]
 
-      var n = 0
-
-      while(!queue.isEmpty && n < BATCH_SIZE)
+      while(!queue.isEmpty)
       {
         work = work :+ queue.poll()
-        n += 1
       }
 
       val now = System.currentTimeMillis()
@@ -64,8 +61,9 @@ class Coordinator(val id: String) extends Actor {
 
         if(elapsed >= SERVER_TIMEOUT){
           t.p.success(false)
-
           queue.remove(t)
+
+          log.info(s"${Console.RED}aborting ${t.id}...\n${Console.RESET}")
 
         } else if(!t.keys.exists(keys.contains(_))) {
 
@@ -73,6 +71,8 @@ class Coordinator(val id: String) extends Actor {
           keys = keys ++ t.keys
 
           t.p.success(true)
+
+          log.info(s"${Console.BLUE}processing ${t.id}...\n${Console.RESET}")
 
           queue.remove(t)
         } else {
@@ -97,9 +97,14 @@ class Coordinator(val id: String) extends Actor {
     case _: MemberEvent => // ignore
 
     case cmd: Enqueue =>
-      val t = Transaction(cmd.id, cmd.keys)
-      queue.add(t)
-      t.p.future.pipeTo(sender)
+
+      if(queue.size() < 1000){
+        val t = Transaction(cmd.id, cmd.keys)
+        queue.add(t)
+        t.p.future.pipeTo(sender)
+      } else {
+        sender ! false
+      }
 
     case cmd: Release => running.remove(id)
 

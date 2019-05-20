@@ -5249,18 +5249,19 @@
 [debug] == resolving dependencies default#transactor$sources;0.1->jline#jline;2.14.6 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.8!scala-library.jar(src)
-[debug] 	[NOT REQUIRED] org.objenesis#objenesis;2.5.1!objenesis.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.1.1!scala-parser-combinators_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.google.j2objc#j2objc-annotations;1.1!j2objc-annotations.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
-[debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-cluster_2.12;2.5.22!akka-cluster_2.12.jar(src)
 [debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
+[debug] 	[NOT REQUIRED] org.objenesis#objenesis;2.5.1!objenesis.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.1.1!scala-parser-combinators_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.8!scala-library.jar(src)
 [debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
 [debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
+[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src)
 [debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
+[debug] 	[NOT REQUIRED] com.google.j2objc#j2objc-annotations;1.1!j2objc-annotations.jar(src)
+[debug] no default ivy user dir defined: set to C:\Users\lucasrpb\.ivy2
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
@@ -5272,28 +5273,18 @@
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to C:\Users\lucasrpb\.ivy2\cache
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to C:\Users\lucasrpb\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to C:\Users\lucasrpb\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to C:\Users\lucasrpb\.ivy2\cache
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to C:\Users\lucasrpb\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to C:\Users\lucasrpb\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to C:\Users\lucasrpb\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (1094ms)
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] settings loaded (16ms)
 [debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -5308,47 +5299,72 @@
 [debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.2!reactive-streams.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-protobuf_2.12;2.5.22!akka-protobuf_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.agrona#agrona;0.9.31!agrona.jar(src)
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] 	[NOT REQUIRED] io.netty#netty;3.10.6.Final!netty.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-cluster-metrics_2.12;2.5.22!akka-cluster-metrics_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.codehaus.mojo#animal-sniffer-annotations;1.17!animal-sniffer-annotations.jar(src)
 [debug] 	[NOT REQUIRED] io.aeron#aeron-client;1.15.1!aeron-client.jar(src)
 [debug] 	[NOT REQUIRED] com.twitter#chill-java;0.9.3!chill-java.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.8.1!commons-lang3.jar(src)
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (62ms)
+[debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-coordination_2.12;2.5.22!akka-coordination_2.12.jar(src)
+[debug] settings loaded (62ms)
+[debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.3.7!ssl-config-core_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-remote_2.12;2.5.22!akka-remote_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.3!config.jar(src)
 [debug] 	[NOT REQUIRED] org.checkerframework#checker-qual;2.5.2!checker-qual.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-remote_2.12;2.5.22!akka-remote_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.8!scala-reflect.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-cluster-tools_2.12;2.5.22!akka-cluster-tools_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.5.22!akka-actor_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.google.guava#failureaccess;1.0.1!failureaccess.jar(src)
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	[NOT REQUIRED] com.google.guava#guava;27.1-jre!guava.jar(src)
 [debug] 	[NOT REQUIRED] com.esotericsoftware#minlog;1.3.0!minlog.jar(src)
 [debug] 	[NOT REQUIRED] com.twitter#chill-akka_2.12;0.9.3!chill-akka_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.twitter#chill_2.12;0.9.3!chill_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.8.1!commons-lang3.jar(src)
 [debug] 	[NOT REQUIRED] io.aeron#aeron-driver;1.15.1!aeron-driver.jar(src)
 [debug] 	[NOT REQUIRED] com.google.errorprone#error_prone_annotations;2.2.0!error_prone_annotations.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.12;2.5.22!akka-testkit_2.12.jar(src)
-[debug] settings loaded (1250ms)
-[debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-cluster-tools_2.12;2.5.22!akka-cluster-tools_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.8!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
-[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] settings loaded (78ms)
+[debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (1344ms)
+[debug] settings loaded (78ms)
 [debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -5357,7 +5373,9 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] settings loaded (1375ms)
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/C:/Users/lucasrpb/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (78ms)
 [debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -5366,25 +5384,7 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] settings loaded (1375ms)
-[debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (1375ms)
-[debug] 	default cache: C:\Users\lucasrpb\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] :: resolution report :: resolve 6032ms :: artifacts dl 1593ms
+[debug] :: resolution report :: resolve 1016ms :: artifacts dl 93ms
 [debug] 	report for default#transactor$sources;0.1 compile produced in C:\Users\lucasrpb\IdeaProjects\transactor\target\scala-2.12\resolution-cache\reports\default-transactor$sources-compile.xml
 [debug] 	report for default#transactor$sources;0.1 runtime produced in C:\Users\lucasrpb\IdeaProjects\transactor\target\scala-2.12\resolution-cache\reports\default-transactor$sources-runtime.xml
 [debug] 	report for default#transactor$sources;0.1 test produced in C:\Users\lucasrpb\IdeaProjects\transactor\target\scala-2.12\resolution-cache\reports\default-transactor$sources-test.xml
@@ -5396,4 +5396,4 @@
 [debug] 	report for default#transactor$sources;0.1 plugin produced in C:\Users\lucasrpb\IdeaProjects\transactor\target\scala-2.12\resolution-cache\reports\default-transactor$sources-plugin.xml
 [debug] 	report for default#transactor$sources;0.1 pom produced in C:\Users\lucasrpb\IdeaProjects\transactor\target\scala-2.12\resolution-cache\reports\default-transactor$sources-pom.xml
 [debug] 	report for default#transactor$sources;0.1 scala-tool produced in C:\Users\lucasrpb\IdeaProjects\transactor\target\scala-2.12\resolution-cache\reports\default-transactor$sources-scala-tool.xml
-[debug] 	resolve done (6032ms resolve - 1593ms download)
+[debug] 	resolve done (1016ms resolve - 93ms download)
