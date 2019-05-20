@@ -40,7 +40,6 @@ class Coordinator(val id: String) extends Actor {
     cluster.subscribe(self, initialStateMode = InitialStateAsEvents, classOf[MemberEvent], classOf[UnreachableMember])
 
     context.system.scheduler.schedule(10 milliseconds, 10 milliseconds){
-
       var work = Seq.empty[Transaction]
 
       while(!queue.isEmpty)
