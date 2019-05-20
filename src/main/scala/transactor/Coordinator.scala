@@ -1,76 +1,84 @@
 package transactor
 
-import java.util.concurrent.ConcurrentLinkedDeque
+import java.util.concurrent.{ConcurrentLinkedDeque, TimeoutException}
 
 import akka.actor.Actor
 import akka.cluster.Cluster
 import akka.cluster.ClusterEvent._
 import akka.cluster.client.ClusterClientReceptionist
+import akka.cluster.singleton.{ClusterSingletonProxy, ClusterSingletonProxySettings}
 
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
 import akka.pattern._
+import akka.util.Timeout
 import protocol._
 
 import scala.collection.concurrent.TrieMap
 import scala.concurrent.Promise
 
-class Transactor(val id: String) extends Actor {
+class Coordinator(val id: String) extends Actor {
 
+  implicit val ec = context.dispatcher
+  implicit val timeout = Timeout(5 seconds)
   val log = context.system.log
 
   val queue = new ConcurrentLinkedDeque[Transaction]()
-  var work = Seq.empty[Transaction]
-  val running = TrieMap[String, Transaction]()
+  var running = TrieMap[String, Transaction]()
 
   val cluster = Cluster(context.system)
   ClusterClientReceptionist(context.system).registerService(self)
+
+  val proxy = context.actorOf(
+    ClusterSingletonProxy.props(
+      singletonManagerPath = "/user/leader/singleton",
+      settings = ClusterSingletonProxySettings(context.system)),
+    name = "leaderProxy")
 
   // subscribe to cluster changes, re-subscribe when restart
   override def preStart(): Unit = {
     cluster.subscribe(self, initialStateMode = InitialStateAsEvents, classOf[MemberEvent], classOf[UnreachableMember])
 
-    context.system.scheduler.schedule(10 milliseconds, 10 milliseconds){
+    context.system.scheduler.schedule(5 milliseconds, 5 milliseconds){
 
       var work = Seq.empty[Transaction]
-      val it = queue.iterator()
 
-      while(it.hasNext){
-        work = work :+ it.next()
+      var n = 0
+
+      while(!queue.isEmpty && n < BATCH_SIZE)
+      {
+        work = work :+ queue.poll()
+        n += 1
+      }
+
+      val now = System.currentTimeMillis()
+
+      running = running.filter { case (id, t) =>
+        now - t.tmp < SERVER_TIMEOUT
       }
 
       var keys = running.map(_._2.keys).flatten.toSeq
 
-      val now = System.currentTimeMillis()
-
       work.sortBy(_.id).foreach { t =>
         val elapsed = now - t.tmp
 
-        if(elapsed >= TIMEOUT){
-
-          println(s"${Console.RED}tx ${t.id} timed out...${Console.RESET}")
-
+        if(elapsed >= SERVER_TIMEOUT){
           t.p.success(false)
+
           queue.remove(t)
 
-
-        } else if(!t.keys.exists(keys.contains(_))){
-
-          println(s"${Console.BLUE}processing tx ${t.id}...${Console.RESET}")
-
-          t.p.success(true)
+        } else if(!t.keys.exists(keys.contains(_))) {
 
           running.put(t.id, t)
           keys = keys ++ t.keys
 
-          queue.remove(t)
+          t.p.success(true)
 
+          queue.remove(t)
         } else {
           //t.p.success(false)
         }
       }
-
-
     }
   }
 
@@ -89,22 +97,14 @@ class Transactor(val id: String) extends Actor {
     case _: MemberEvent => // ignore
 
     case cmd: Enqueue =>
-
       val t = Transaction(cmd.id, cmd.keys)
       queue.add(t)
-
       t.p.future.pipeTo(sender)
 
-    case cmd: Release =>
-      running.remove(cmd.id)
-      sender ! true
+    case cmd: Release => running.remove(id)
 
-    case obj: Person =>
-      log.info(s"received ${obj}\n")
-      sender ! true
-
-    case obj: Boolean => log.info(s"received ${obj}!\n")
-      sender ! true
+    case cmd: String => sender ! "world"
+      //(proxy ? cmd).pipeTo(sender)
 
     case _ =>
   }

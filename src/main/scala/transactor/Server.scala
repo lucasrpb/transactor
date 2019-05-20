@@ -1,6 +1,7 @@
 package transactor
 
-import akka.actor.{ActorSystem, Props}
+import akka.actor.{ActorSystem, PoisonPill, Props}
+import akka.cluster.singleton.{ClusterSingletonManager, ClusterSingletonManagerSettings}
 import com.typesafe.config.ConfigFactory
 
 object Server {
@@ -14,7 +15,13 @@ object Server {
         """).withFallback(ConfigFactory.load())
     val system = ActorSystem("transactors", config)
 
-    system.actorOf(Props(classOf[Transactor], port), s"t-$port")
+    val leader = system.actorOf(
+      ClusterSingletonManager.props(
+        singletonProps = Props(classOf[Leader]),
+        terminationMessage = PoisonPill,
+        settings = ClusterSingletonManagerSettings(system)), name = "leader")
+
+    system.actorOf(Props(classOf[Coordinator], port), s"t-$port")
   }
 
 }

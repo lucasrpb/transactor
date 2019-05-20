@@ -9,8 +9,9 @@ import scala.concurrent.Promise
 
 package object protocol {
 
-  val TIMEOUT = 1000
-  val BATCH_SIZE = 100
+  val SERVER_TIMEOUT = 50
+  val CLIENT_TIMEOUT = 700
+  val BATCH_SIZE = 1000
 
   trait Command
 
